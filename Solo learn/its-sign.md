@@ -24,14 +24,3 @@ TACOS
 ```
 Abrir
 ```
-"""
-
-# Salvando o conteúdo em um arquivo .md
-file_path = '/caminho/para/seu/diretorio/desafio_palindromo.md'
-with open(file_path, 'w') as file:
-    file.write(conteudo)
-```
-
-### Instruções:
-1. Substitua `'/caminho/para/seu/diretorio/desafio_palindromo.md'` pelo caminho onde você deseja salvar o arquivo no seu sistema.
-2. Execute o script em um ambiente Python. Isso criará o arquivo `.md` com o conteúdo desejado.
