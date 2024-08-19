@@ -23,4 +23,3 @@ Um valor percentual arredondado para o número inteiro mais próximo.
 ```
 50
 ```
-```
