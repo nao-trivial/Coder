@@ -1,6 +1,4 @@
-Aqui está o texto formatado em Markdown (.md) em português:
 
-```markdown
 ## Probabilidade do Doces ou Travessuras
 
 Você vai fazer "doces ou travessuras" com um amigo, e todos, exceto três das casas que você visita, estão distribuindo doces. Dentre essas três casas:
@@ -26,5 +24,3 @@ Um valor percentual arredondado para o número inteiro mais próximo.
 50
 ```
 ```
-
-Esse formato torna o texto organizado e de fácil compreensão em um arquivo Markdown.
