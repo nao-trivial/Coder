@@ -1,0 +1,11 @@
+houses = int(input())
+
+#your code goes here
+
+resultado = (2 * 100)/houses
+
+if resultado > int(resultado):
+   resultado += 1
+   print(int(resultado))
+else:
+   print(int(resultado))
