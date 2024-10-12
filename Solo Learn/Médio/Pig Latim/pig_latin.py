@@ -1,6 +1,6 @@
-x = input()
+frase = input()
 
-palavras = x.split()
+palavras = frase.split()
 lista = []
 for palavra in palavras:
 	x = palavra[1:] #1° letra
