@@ -1,12 +1,12 @@
-Comparação de Área de Varandas
+# Comparação de Área de Varandas
 
 Você está tentando determinar qual dos dois apartamentos tem uma varanda maior. Ambas as varandas são retangulares, e você tem as medidas de comprimento e largura de cada varanda, mas precisa calcular suas áreas para descobrir qual é a maior.
 
-Tarefa
+## Tarefa
 
 Dadas as dimensões das varandas de dois apartamentos, calcule a área de cada uma e informe se a varanda do apartamento A ou do apartamento B é maior.
 
-Formato de Entrada
+### Formato de Entrada
 
 Duas strings que representam as medidas das varandas no seguinte formato:
 
