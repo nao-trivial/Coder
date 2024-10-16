@@ -29,21 +29,18 @@ Uma string que diz:
 ## Exemplo
 
 ### Entrada de Exemplo:
-
-'''
+```
 '5,5'
 '2,10'
-'''
+```
 
 ### Saída de Exemplo:
-'''
+```
 Apartamento A
-''''
+```
 
 ## Explicação:
 
 A área da varanda do apartamento A é calculada como 5 * 5 = 25.
 A área da varanda do apartamento B é calculada como 2 * 10 = 20.
 Como a varanda do apartamento A é maior, a saída é "Apartamento A".
-
-
