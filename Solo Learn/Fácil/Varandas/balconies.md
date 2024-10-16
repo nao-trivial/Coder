@@ -17,7 +17,7 @@ Duas strings que representam as medidas das varandas no seguinte formato:
 
 Cada medida é separada por uma vírgula.
 
-Formato de Saída
+### Formato de Saída
 
 Uma string que diz:
 
@@ -26,18 +26,18 @@ Uma string que diz:
 "Apartamento B" se o apartamento B tiver a varanda maior.
 
 
-Exemplo
+## Exemplo
 
-Entrada de Exemplo:
+### Entrada de Exemplo:
 
 '5,5'
 '2,10'
 
-Saída de Exemplo:
+### Saída de Exemplo:
 
 Apartamento A
 
-Explicação:
+## Explicação:
 
 A área da varanda do apartamento A é calculada como 5 * 5 = 25.
 A área da varanda do apartamento B é calculada como 2 * 10 = 20.
