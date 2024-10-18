@@ -20,6 +20,8 @@ def Numbering(x, y):
 
 # define function
 def Coordinates(count):
-   return (count % 8) * 50 - 200, (count // 8) * 50 - 200
+   a = (count % 8) * 50 - 200
+   b = (count // 8) * 50 - 200
+   return a, b
 
-def click(
+def click(x, y):
