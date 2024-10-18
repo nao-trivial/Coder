@@ -25,3 +25,9 @@ def Coordinates(count):
    return a, b
 
 def click(x, y):
+   spot = Numbering(x, y)
+   mark = state['mark']
+   
+   # verificar variável error
+   if mark is None or mark == spot or tiles[mark] != error:
+      state['mark'] = spot
