@@ -45,3 +45,7 @@ def draw():
       if hide[count]:
          x, y = Coordinates(count)
          Square(x, y)
+
+   mark = state['mark']
+
+   if mark is not None and hide[mark]:
