@@ -43,3 +43,5 @@ def draw():
 
    for count in range(64):
       if hide[count]:
+         x, y = Coordinates(count)
+         Square(x, y)
