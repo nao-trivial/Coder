@@ -31,3 +31,15 @@ def click(x, y):
    # verificar variável error
    if mark is None or mark == spot or tiles[mark] != error:
       state['mark'] = spot
+   eles:
+      hide[spot] = False
+      hide[mark] = False
+      state['mark'] = None
+
+def draw():
+   clear()
+   goto(0, 0)
+   stamp()
+
+   for count in range(64):
+      if hide[count]:
