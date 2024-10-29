@@ -3,7 +3,7 @@ def check_security(floor):
     money_position = floor.find('$')
     thief_position = floor.find('T')
     
-    # If there is no money or thief, no need to check further
+    # Se não há dinheiro ou ladrao, não há necessidade de checar
     if money_position == -1 or thief_position == -1:
         return 'quiet'
     
