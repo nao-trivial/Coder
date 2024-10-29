@@ -7,7 +7,7 @@ def check_security(floor):
     if money_position == -1 or thief_position == -1:
         return 'quiet'
     
-    # Check if there is a guard between the money and the thief
+    # Cheque se existe um guarda entre o dinheiro e o ladrão
     if money_position < thief_position:
         # Check between money and thief positions
         if 'G' in floor[money_position:thief_position]:
