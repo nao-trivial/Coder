@@ -1,5 +1,5 @@
 def check_security(floor):
-    # Find positions of money, thief, and guards
+    # Encontre posições de dinheiro, ladrão e guardas
     money_position = floor.find('$')
     thief_position = floor.find('T')
     
