@@ -11,7 +11,7 @@ def get_day_of_week(date_str):
         except ValueError:
             return "Invalid date format. Please use 'MM/DD/YYYY' or 'Month Day, Year'."
 
-    # Get the day of the week and return it
+    # Pegue o dia da semana e o retorne
     return date_obj.strftime("%A")
 
 # Sample Input
