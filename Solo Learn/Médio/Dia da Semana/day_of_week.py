@@ -2,7 +2,7 @@ from datetime import datetime
 
 def get_day_of_week(date_str):
     try:
-        # First, try parsing the "MM/DD/YYYY" format
+        # Primeiro tente analisar o formato "MM/DD/YYYY"
         date_obj = datetime.strptime(date_str, "%m/%d/%Y")
     except ValueError:
         try:
