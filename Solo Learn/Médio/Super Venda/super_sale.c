@@ -26,7 +26,7 @@ double calculate_savings(const char* prices_str) {
         }
     }
 
-    // Calculate the total savings for the discounted items
+    // Calcule a economia total para o desconto dos itens
     double savings = 0.0;
     for (int i = 0; i < count; i++) {
         if (prices[i] != max_price) {
