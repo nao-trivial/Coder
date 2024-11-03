@@ -8,7 +8,7 @@ def calculate_savings(prices_str):
     # Calcule o total das economias para o desconto
     savings = sum(price * 0.30 for price in prices if price != max_price)
     
-    # Apply sales tax to the savings
+    # Aplique a taxa de venda para as economias
     savings_with_tax = savings * 1.07
     
     # Convert the savings to an integer
