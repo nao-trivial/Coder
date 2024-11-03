@@ -2,7 +2,7 @@ def calculate_savings(prices_str):
     # Parse the input string into a list of floats
     prices = list(map(float, prices_str.split(',')))
     
-    # Identify the most expensive item
+    # Indentifique os itens mais caros
     max_price = max(prices)
     
     # Calculate the total savings for the discounted items
