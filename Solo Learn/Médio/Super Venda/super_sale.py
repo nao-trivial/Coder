@@ -5,7 +5,7 @@ def calculate_savings(prices_str):
     # Indentifique os itens mais caros
     max_price = max(prices)
     
-    # Calculate the total savings for the discounted items
+    # Calcule o total das economias para o desconto
     savings = sum(price * 0.30 for price in prices if price != max_price)
     
     # Apply sales tax to the savings
