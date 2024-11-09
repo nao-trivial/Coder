@@ -1,105 +1,53 @@
-import pyautogui
-import time
+from engine_automate import AutomacaoMouse
 
-# Esperar 5 segundos para você se preparar
-time.sleep(5)
+# Função principal que executa a automação
+def automacao():
+    automacao_mouse = AutomacaoMouse()
 
-# Coordenadas desejadas
-posicao = (1453, 1066)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
+    # Esperar 5 segundos para se preparar
+    automacao_mouse.esperar(5)
 
-# Esperar 5 segundos para você se preparar
-time.sleep(5)
+    # Realizar o clique em um local específico
+    automacao_mouse.realizar_acao((1453, 1066), automacao_mouse.clicar)
 
-# Realizar o clique
-pyautogui.click()
+    # Esperar 5 segundos
+    automacao_mouse.esperar(5)
 
-# Esperar 5 segundos para você se preparar
-time.sleep(5)
+    # Digitar URL
+    automacao_mouse.digitar('https://www.canva.com/')
+    automacao_mouse.pressionar_enter()
 
-# Digitar um texto
-pyautogui.write('https://www.canva.com/', interval=0.1)
+    nome_do_post = input("Insira o nome do post a ser postado: ")
 
-# Pressionar Enter
-pyautogui.press('enter')
+    # Realizar o clique para inserir o nome do post
+    automacao_mouse.realizar_acao((1301, 140), automacao_mouse.clicar)
+    automacao_mouse.digitar(nome_do_post)
+    automacao_mouse.pressionar_enter()
 
-nome_do_post = input("Insira o nome do post a ser postado: ")
+    # Verificar se o post é o primeiro
+    verificacao1 = input("O post é o primeiro? Responda com o numero '1' se o for: ")
 
-# Coordenadas desejadas
-posicao = (1301, 140)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
+    if verificacao1 == "1":
+        # Realizar o clique se for o primeiro post
+        automacao_mouse.realizar_acao((1173, 461), automacao_mouse.clicar)
 
-# Realizar o clique
-pyautogui.click()
+    # Realizar outros cliques
+    coordenadas = [
+        (1845, 280),
+        (1894, 144),
+        (1466, 651),
+        (1716, 321),
+        (1654, 468),
+        (1638, 714)
+    ]
 
-# Digitar um texto
-pyautogui.write(nome_do_post, interval=0.1)
+    for posicao in coordenadas:
+        automacao_mouse.realizar_acao(posicao, automacao_mouse.clicar)
 
-# Pressionar Enter
-pyautogui.press('enter')
+    # Esperar 15 segundos para se preparar
+    automacao_mouse.esperar(15)
 
-verificacao1 = input("O post é o primeiro? Responda com o numero '1' se o for (exemplo)")
 
-if verificacao1 == "1":
-    # Coordenadas desejadas
-    posicao = (1173, 461)
-    # Mover o mouse para a posição desejada com uma duração de 3 segundos
-    pyautogui.moveTo(posicao, duration=3)
-
-    # Realizar o clique
-    pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1845, 280)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1894, 144)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1466, 651)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1716, 321)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1654, 468)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1654, 468)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (1638, 714)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-# Realizar o clique
-pyautogui.click()
-
-# Esperar 5 segundos para você se preparar
-time.sleep(15)
-
+# Executar a automação
+if __name__ == "__main__":
+    automacao()

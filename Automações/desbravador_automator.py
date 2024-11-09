@@ -1,68 +1,37 @@
-import pyautogui
-import time
+from engine_automate import AutomacaoMouse
 
-# Esperar 5 segundos para você se preparar
-time.sleep(5)
+# Uso da classe para realizar as ações
+def automacao():
+    automacao_mouse = AutomacaoMouse()
 
-# Coordenadas desejadas
-posicao = (1380, 275)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
+    # Esperar 5 segundos para se preparar
+    automacao_mouse.esperar(5)
 
-# Realizar o duplo clique
-pyautogui.doubleClick()
+    # Realizar as ações de automação
+    automacao_mouse.realizar_acao((1380, 275), automacao_mouse.duplo_clique)
+    
+    # Esperar 5 segundos
+    automacao_mouse.esperar(5)
+    
+    automacao_mouse.realizar_acao((730, 468), automacao_mouse.digitar, '919277')
+    automacao_mouse.realizar_acao((730, 468), automacao_mouse.pressionar_enter)
 
-# Esperar 5 segundos para você se preparar
-time.sleep(5)
+    automacao_mouse.realizar_acao((731, 542), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((765, 487), automacao_mouse.clicar)
+    
+    automacao_mouse.realizar_acao((765, 487), automacao_mouse.digitar, '919277')
+    automacao_mouse.realizar_acao((765, 487), automacao_mouse.pressionar_enter)
+    
+    automacao_mouse.realizar_acao((102, 54), automacao_mouse.clicar)
+    
+    pax = input("Insira o nome do pax: ")
+    
+    automacao_mouse.realizar_acao((93, 136), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((93, 136), automacao_mouse.digitar, pax)
+    
+    automacao_mouse.realizar_acao((1149, 244), automacao_mouse.clicar)
 
-# Coordenadas desejadas
-posicao = (730, 468)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
 
-# Digitar um texto
-pyautogui.write('919277', interval=0.1)
-
-# Pressionar Enter
-pyautogui.press('enter')
-
-# Coordenadas desejadas
-posicao = (731, 542)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-pyautogui.click()
-
-# Coordenadas desejadas
-posicao = (765, 487)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-pyautogui.click()
-
-# Digitar um texto
-pyautogui.write('919277', interval=0.1)
-
-# Pressionar Enter
-pyautogui.press('enter')
-
-# Coordenadas desejadas
-posicao = (102, 54)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-pyautogui.click()
-
-pax = input("insira o nome do pax: ")
-
-# Coordenadas desejadas
-posicao = (93, 136)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-pyautogui.click()
-
-# Digitar um texto
-pyautogui.write(pax, interval=0.1)
-
-# Coordenadas desejadas
-posicao = (1149, 244)
-# Mover o mouse para a posição desejada com uma duração de 3 segundos
-pyautogui.moveTo(posicao, duration=3)
-pyautogui.click()
+# Executar a automação
+if __name__ == "__main__":
+    automacao()
