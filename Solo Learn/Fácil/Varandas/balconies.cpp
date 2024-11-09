@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    // Variables to store dimensions and areas
+    // Variáveis para guardar dimensões e areas
     int heightA, widthA, heightB, widthB, areaA, areaB;
 
     // Input dimensions for apartment A
