@@ -34,20 +34,33 @@ def faca_cadastro():
 
     nome = input("Insira o nome compelto: ")
     cpf_id = input("Insira o cpf/id: ")
-    """cep_zip = input()
-    contato = input()
-    email = input()"""
+    cep_zip = input("Insira o cep: ")
+    contato = input("Insira o numero p/ ctt: ")
+    email = input("Insira o email p/ ctt: ")
 
     # Selecione o pais internacional para evitar problemas com Ex
     automacao_mouse.realizar_acao((597, 468), automacao_mouse.clicar)
     automacao_mouse.realizar_acao((597, 468), automacao_mouse.pressionar_baixo)
     automacao_mouse.realizar_acao((597, 468), automacao_mouse.pressionar_enter)
 
-    # Demais dados
+    # Nome + CPF
     automacao_mouse.realizar_acao((673, 261), automacao_mouse.clicar)
     automacao_mouse.realizar_acao((673, 261), automacao_mouse.digitar, nome)
     automacao_mouse.realizar_acao((673, 261), automacao_mouse.pressionar_enter)
     automacao_mouse.realizar_acao((673, 261), automacao_mouse.digitar, cpf_id)
+
+    # Endereço 
+    automacao_mouse.realizar_acao((774, 469), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((774, 469), automacao_mouse.digitar, cep_zip)
+    automacao_mouse.realizar_acao((774, 469), automacao_mouse.pressionar_enter)
+    automacao_mouse.realizar_acao((774, 469), automacao_mouse.pressionar_enter)
+    automacao_mouse.realizar_acao((927, 517), automacao_mouse.clicar)
+
+    # Formas de contato
+    automacao_mouse.realizar_acao((590, 560), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((590, 560), automacao_mouse.digitar, contato)
+    automacao_mouse.realizar_acao((582, 610), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((582, 610), automacao_mouse.digitar, email)
 
 def cadastro():
     automacao_mouse = AutomacaoMouse()

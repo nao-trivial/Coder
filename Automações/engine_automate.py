@@ -2,7 +2,7 @@ import pyautogui
 import time
 
 class AutomacaoMouse:
-    def __init__(self, duracao_move=3):
+    def __init__(self, duracao_move=2):
         self.duracao_move = duracao_move
     
     def esperar(self, segundos):
