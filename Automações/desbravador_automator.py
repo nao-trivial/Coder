@@ -29,6 +29,26 @@ def login():
     automacao_mouse.realizar_acao((765, 487), automacao_mouse.digitar, '919277')
     automacao_mouse.realizar_acao((765, 487), automacao_mouse.pressionar_enter)
 
+def faca_cadastro():
+    automacao_mouse = AutomacaoMouse()
+
+    nome = input("Insira o nome compelto: ")
+    cpf_id = input("Insira o cpf/id: ")
+    """cep_zip = input()
+    contato = input()
+    email = input()"""
+
+    # Selecione o pais internacional para evitar problemas com Ex
+    automacao_mouse.realizar_acao((597, 468), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((597, 468), automacao_mouse.pressionar_baixo)
+    automacao_mouse.realizar_acao((597, 468), automacao_mouse.pressionar_enter)
+
+    # Demais dados
+    automacao_mouse.realizar_acao((673, 261), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((673, 261), automacao_mouse.digitar, nome)
+    automacao_mouse.realizar_acao((673, 261), automacao_mouse.pressionar_enter)
+    automacao_mouse.realizar_acao((673, 261), automacao_mouse.digitar, cpf_id)
+
 def cadastro():
     automacao_mouse = AutomacaoMouse()
 
@@ -40,8 +60,6 @@ def cadastro():
     for posicao in coordenadas:
         automacao_mouse.realizar_acao(posicao, automacao_mouse.clicar)
     automacao_mouse.realizar_acao((399, 347), automacao_mouse.duplo_clique)
-
-    
 
 def check_in():
     automacao_mouse = AutomacaoMouse()
@@ -59,4 +77,4 @@ def check_in():
 
 # Executar a automação
 if __name__ == "__main__":
-    cadastro()
+    faca_cadastro()

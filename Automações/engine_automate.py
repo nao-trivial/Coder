@@ -29,6 +29,10 @@ class AutomacaoMouse:
         """Pressionar a tecla Enter."""
         pyautogui.press('enter')
 
+    def pressionar_baixo(self):
+        # Pressione a tecla baixo
+        pyautogui.press('down')
+
     def realizar_acao(self, posicao, acao, *args):
         """Executar uma ação em uma posição específica."""
         self.mover_para(posicao)
