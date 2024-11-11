@@ -29,6 +29,7 @@ def login():
     automacao_mouse.realizar_acao((765, 487), automacao_mouse.digitar, '919277')
     automacao_mouse.realizar_acao((765, 487), automacao_mouse.pressionar_enter)
 
+# Função para fazer cadastro
 def faca_cadastro():
     automacao_mouse = AutomacaoMouse()
 
@@ -62,7 +63,8 @@ def faca_cadastro():
     automacao_mouse.realizar_acao((582, 610), automacao_mouse.clicar)
     automacao_mouse.realizar_acao((582, 610), automacao_mouse.digitar, email)
 
-def cadastro():
+# Função para abrir cadastro
+def abrir_cadastro():
     automacao_mouse = AutomacaoMouse()
 
     # Entra no cadastro de hospede principal
@@ -74,6 +76,7 @@ def cadastro():
         automacao_mouse.realizar_acao(posicao, automacao_mouse.clicar)
     automacao_mouse.realizar_acao((399, 347), automacao_mouse.duplo_clique)
 
+# Função para abrir o check-in e buscar pax
 def check_in():
     automacao_mouse = AutomacaoMouse()
 
@@ -87,7 +90,38 @@ def check_in():
     automacao_mouse.realizar_acao((93, 136), automacao_mouse.digitar, pax)
     automacao_mouse.realizar_acao((1149, 244), automacao_mouse.clicar)
 
+# Menu de opções
+def exibir_menu():
+    print("\nMenu de opções:")
+    print("1. Login")
+    print("2. Cadastro")
+    print("3. Cadastro de Hóspede")
+    print("4. Check-in")
+    print("5. Sair")
 
-# Executar a automação
+# Função principal para executar o menu
+def main():
+    while True:
+        exibir_menu()
+        opcao = input("Escolha uma opção (1-5): ")
+
+        if opcao == '1':
+            print("Executando Login...")
+            login()
+        elif opcao == '2':
+            print("Executando Cadastro...")
+            abrir_cadastro()
+        elif opcao == '3':
+            print("Executando Cadastro de Hóspede...")
+            faca_cadastro()
+        elif opcao == '4':
+            print("Executando Check-in...")
+            check_in()
+        elif opcao == '5':
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida! Por favor, escolha uma opção entre 1 e 5.")
+
 if __name__ == "__main__":
-    faca_cadastro()
+    main()
