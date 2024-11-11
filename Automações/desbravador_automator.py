@@ -93,10 +93,10 @@ def check_in():
 # Menu de opções
 def exibir_menu():
     print("\nMenu de opções:")
-    print("1. Login")
-    print("2. Cadastro")
-    print("3. Cadastro de Hóspede")
-    print("4. Check-in")
+    print("1. Fazer login no desbravador")
+    print("2. Entrando no cadastro")
+    print("3. Fazendo cadastro de Hóspede")
+    print("4. Iniciando Check-in")
     print("5. Sair")
 
 # Função principal para executar o menu
