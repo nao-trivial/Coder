@@ -109,7 +109,7 @@ def main():
             print("Executando Login...")
             login()
         elif opcao == '2':
-            print("Executando Cadastro...")
+            print("Abrindo Cadastro...")
             abrir_cadastro()
         elif opcao == '3':
             print("Executando Cadastro de Hóspede...")
