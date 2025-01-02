@@ -58,7 +58,7 @@ O principal objetivo deste repositório é **aprimorar minhas habilidades de pro
 
 ---
 
-🚀 Próximos Passos
+## 🚀 Próximos Passos
 
 Adicionar novos desafios em linguagens que ainda não explorei.
 
@@ -70,7 +70,7 @@ Documentar as soluções para facilitar o aprendizado.
 
 ---
 
-📜 Licença
+## 📜 Licença
 
 Este repositório é destinado a fins de aprendizado. Sinta-se à vontade para usá-lo e adaptá-lo, mas lembre-se de dar os devidos créditos se reutilizar algo.
 
