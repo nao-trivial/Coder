@@ -42,21 +42,6 @@ O principal objetivo deste repositório é **aprimorar minhas habilidades de pro
 
 ---
 
-## 🔧 Como Usar
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/Coder.git
-
-2. Navegue até a pasta desejada e explore os arquivos.
-
-
-3. Execute os projetos e aprenda junto com os comentários e anotações.
-
-
-
-
----
 
 ## 🚀 Próximos Passos
 
