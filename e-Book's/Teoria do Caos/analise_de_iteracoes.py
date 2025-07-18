@@ -2,14 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
-def analise_iteracao_linear(f, x0, n_iteracoes=20, x_range=(-5, 5)):
+def analise_iteracao_linear(f, x0, n_iteracoes=20, x_range=(-10, 10)):
     """
     Analisa uma iteração linear genérica x_{n+1} = f(x_n), com:
     - Gráfico da sequência temporal.
     - Diagrama de teia de aranha (cobweb plot).
     
     Parâmetros:
-        f (função): Função de iteração (ex: lambda x: 0.5*x + 2).
+        f (função): Função de iteração.
         x0 (float): Condição inicial.
         n_iteracoes (int): Número de iterações.
         x_range (tuple): Intervalo para plotar a função.
@@ -62,6 +62,6 @@ def analise_iteracao_linear(f, x0, n_iteracoes=20, x_range=(-5, 5)):
     plt.show()
 
 # Exemplo de uso:
-f = lambda x: 0.5 * x + 2  # Mapeamento afim (substitua por qualquer função!)
-x0 = 0.0
-analise_iteracao_linear(f, x0, n_iteracoes=10, x_range=(-1, 5))
+f = lambda x: x**2 - 2  # Substitua por qualquer função!
+x0 = 0.001
+analise_iteracao_linear(f, x0, n_iteracoes=10, x_range=(-5, 5))
