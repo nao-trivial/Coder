@@ -1,3 +1,5 @@
+# Realocar para pasta fácil
+
 numero = int(input())
 
 soma = 0
