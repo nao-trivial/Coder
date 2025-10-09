@@ -8,16 +8,16 @@ def automacao():
     automacao_mouse.esperar(5)
 
     # Realizar o clique em um local específico
-    automacao_mouse.realizar_acao((1453, 1066), automacao_mouse.clicar)
+    automacao_mouse.realizar_acao((1157, 1050), automacao_mouse.clicar)
 
     # Esperar 5 segundos
     automacao_mouse.esperar(5)
 
     # Digitar URL
-    automacao_mouse.digitar('https://www.canva.com/')
+    automacao_mouse.digitar('https://www.anroll.net/a/IlmxWi1ryo')
     automacao_mouse.pressionar_enter()
 
-    nome_do_post = input("Insira o nome do post a ser postado: ")
+    """nome_do_post = input("Insira o nome do post a ser postado: ")
 
     # Realizar o clique para inserir o nome do post
     automacao_mouse.realizar_acao((1301, 140), automacao_mouse.clicar)
@@ -45,7 +45,7 @@ def automacao():
         automacao_mouse.realizar_acao(posicao, automacao_mouse.clicar)
 
     # Esperar 15 segundos para se preparar
-    automacao_mouse.esperar(15)
+    automacao_mouse.esperar(15)"""
 
 
 # Executar a automação
