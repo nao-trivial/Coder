@@ -51,7 +51,7 @@ else:
 · Dollars: é melhor levar dólares (quando o valor convertido é maior)
 · Pesos: é melhor manter pesos (quando o valor convertido é menor ou igual)
 
-####💡 Pontos de Aprendizado
+💡 Pontos de Aprendizado
 
 Conceitos Matemáticos
 
