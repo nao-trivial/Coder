@@ -125,7 +125,7 @@ Resultado: "Profit"
 
 ---
 
-Última atualização: {data}
+Última atualização: 10/10/2025
 
 ```
 
