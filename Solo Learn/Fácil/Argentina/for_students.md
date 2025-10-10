@@ -16,7 +16,7 @@ else:
 
 ## 🔍 Explicação Passo a Passo
 
-1. Entrada de Dados
+### 1. Entrada de Dados
 
 ```python
 pesos = int(input())
@@ -28,7 +28,7 @@ dollars = int(input())
   · Quantidade em dólares
 · int() garante que os valores sejam números inteiros
 
-## 2. Conversão de Moeda
+### 2. Conversão de Moeda
 
 ```python
 exchange = 0.02 * pesos
@@ -38,7 +38,7 @@ exchange = 0.02 * pesos
 · Converte o valor em pesos para dólares
 · Exemplo: 100 pesos = 100 × 0.02 = 2 dólares
 
-## 3. Tomada de Decisão
+### 3. Tomada de Decisão
 
 ```python
 if exchange > dollars:
@@ -51,7 +51,7 @@ else:
 · Dollars: é melhor levar dólares (quando o valor convertido é maior)
 · Pesos: é melhor manter pesos (quando o valor convertido é menor ou igual)
 
-###💡 Pontos de Aprendizado
+####💡 Pontos de Aprendizado
 
 Conceitos Matemáticos
 
