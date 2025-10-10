@@ -14,7 +14,7 @@ else:
     print("Pesos")
 ```
 
-# 🔍 Explicação Passo a Passo
+## 🔍 Explicação Passo a Passo
 
 1. Entrada de Dados
 
