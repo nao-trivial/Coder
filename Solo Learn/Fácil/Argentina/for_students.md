@@ -14,7 +14,7 @@ else:
     print("Pesos")
 ```
 
-🔍 Explicação Passo a Passo
+# 🔍 Explicação Passo a Passo
 
 1. Entrada de Dados
 
@@ -28,7 +28,7 @@ dollars = int(input())
   · Quantidade em dólares
 · int() garante que os valores sejam números inteiros
 
-2. Conversão de Moeda
+## 2. Conversão de Moeda
 
 ```python
 exchange = 0.02 * pesos
@@ -38,7 +38,7 @@ exchange = 0.02 * pesos
 · Converte o valor em pesos para dólares
 · Exemplo: 100 pesos = 100 × 0.02 = 2 dólares
 
-3. Tomada de Decisão
+## 3. Tomada de Decisão
 
 ```python
 if exchange > dollars:
@@ -51,7 +51,7 @@ else:
 · Dollars: é melhor levar dólares (quando o valor convertido é maior)
 · Pesos: é melhor manter pesos (quando o valor convertido é menor ou igual)
 
-💡 Pontos de Aprendizado
+###💡 Pontos de Aprendizado
 
 Conceitos Matemáticos
 
@@ -69,7 +69,7 @@ Programação
    · if/else para decisões binárias
    · Condicional simples com dois caminhos
 
-📊 Exemplos Práticos
+## 📊 Exemplos Práticos
 
 Cenário 1: 500 pesos vs 8 dólares
 
@@ -98,14 +98,14 @@ Conversão: 200 × 0.02 = 4 dólares
 4 < 5 → "Pesos"
 ```
 
-🎯 Objetivo do Programa
+## 🎯 Objetivo do Programa
 
 Decidir qual moeda oferece maior valor de compra:
 
 · Se pesos convertidos valem mais → escolher "Dollars"
 · Se dólares valem mais ou igual → escolher "Pesos"
 
-⚠️ Observações Importantes
+## ⚠️ Observações Importantes
 
 Sobre a Taxa de Câmbio
 
@@ -125,7 +125,7 @@ else:
   · exchange == dollars (valores são iguais)
 · Em ambos, a escolha é "Pesos"
 
-🚀 Melhorias Possíveis
+## 🚀 Melhorias Possíveis
 
 1. Taxa de câmbio variável:
 
