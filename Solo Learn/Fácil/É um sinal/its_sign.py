@@ -9,12 +9,12 @@ def is_palindrome(word):
     return True
 
 def main():
-    # Input four words
+    # Entrada de 4 palavras
     words = []
     for _ in range(4):
         words.append(input().strip())
 
-    # Check if at least one word is a palindrome
+    # Cheque se ao menos uma palavra é um palindromo
     is_palindrome_found = any(is_palindrome(word) for word in words)
 
     # Output result
