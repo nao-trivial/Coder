@@ -7,7 +7,7 @@ def find_item_time(boxes, target_item):
             return time_taken
     return "Item not found in the boxes."
 
-# Test the function with sample input
+# Teste a função com um simples
 boxes = input().strip()
 target_item = input().strip()
 print(find_item_time(boxes, target_item))
