@@ -21,19 +21,19 @@ def ponto_fixo(a, b):
 # Configuração dos parâmetros para diferentes cenários
 cenarios = [
     # a, b, x0, nome, cor
-    (1.1, 0.2, 5, "🚨 CRISE: a > 1 (explosivo)", "red"),
-    (1.1, -0.5, 5, "💔 a > 1 mas b negativo", "darkred"),
-    (0.9, 0.1, 50, "😴 ESMORECIMENTO: a < 1", "blue"),
-    (0.9, 2.0, 50, "✨ a < 1 mas b positivo salva!", "green"),
-    (0.5, 10, 0, "💝 b alto = cuidado constante", "purple"),
-    (-0.7, 5, 20, "🔄 OSCILAÇÃO: a negativo", "orange"),
-    (1.0, 1.0, 0, "📈 CRESCIMENTO LINEAR: a = 1", "brown"),
-    (-1.0, 5, 10, "🔄 CICLO PERIÓDICO: a = -1", "pink")
+    (1.1, 0.2, 5, "CRISE: a > 1 (explosivo)", "red"),
+    (1.1, -0.5, 5, "a > 1 mas b negativo", "darkred"),
+    (0.9, 0.1, 50, "AMORTECIMENTO a < 1", "blue"),
+    (0.9, 2.0, 50, "a < 1 mas b positivo salva!", "green"),
+    (0.5, 10, 0, "b alto = cuidado constante", "purple"),
+    (-0.7, 5, 20, "OSCILAÇÃO: a negativo", "orange"),
+    (1.0, 1.0, 0, "CRESCIMENTO LINEAR: a = 1", "brown"),
+    (-1.0, 5, 10, "CICLO PERIÓDICO: a = -1", "pink")
 ]
 
 # Criar figura com layout mais organizado
 fig = plt.figure(figsize=(15, 12))
-fig.suptitle('🔮 DINÂMICA DE RELACIONAMENTOS: Xₙ₊₁ = a·Xₙ + b', 
+fig.suptitle('DINÂMICA DE RELACIONAMENTOS: Xₙ₊₁ = a·Xₙ + b', 
              fontsize=18, fontweight='bold', y=0.98)
 
 # Grid de subplots
@@ -95,7 +95,7 @@ for idx, (a, b, x0, titulo, cor) in enumerate(cenarios):
 
 # Adicionar gráfico comparativo especial
 ax_comp = plt.subplot(gs[-1])
-ax_comp.set_title('📊 COMPARAÇÃO: O PODER DO PARÂMETRO b', fontsize=12, fontweight='bold')
+ax_comp.set_title('COMPARAÇÃO: O PODER DO PARÂMETRO b', fontsize=12, fontweight='bold')
 
 # Dois cenários com mesmo 'a' ruim, mas 'b' diferente
 a_ruim = 1.2  # > 1, tende a explodir
@@ -174,7 +174,7 @@ def simulador_interativo():
             
             # Adicionar diagnóstico
             diagnostico = "\n".join([
-                f"📊 DIAGNÓSTICO:",
+                f"DIAGNÓSTICO:",
                 f"• Multiplicador emocional (a) = {a}",
                 f"• Cuidado constante (b) = {b}",
                 f"• Estado inicial = {x0}",
@@ -185,7 +185,7 @@ def simulador_interativo():
             if abs(a) > 1:
                 diagnostico += "\n⚠️ ALERTA: Sistema INSTÁVEL (|a| > 1)"
             elif abs(a) < 1 and p_fixo:
-                diagnostico += f"\n✅ Sistema CONVERGE para {p_fixo:.2f}"
+                diagnostico += f"\nSistema CONVERGE para {p_fixo:.2f}"
             
             fig2.text(0.02, 0.02, diagnostico, fontsize=9,
                      bbox=dict(boxstyle="round,pad=0.5", facecolor="lightgreen", alpha=0.7))
@@ -211,7 +211,7 @@ usar_simulador = input("Digite 's' para simular ou qualquer tecla para sair: ")
 if usar_simulador.lower() == 's':
     simulador_interativo()
 
-print("\n✅ Análise completa! Lembre-se:")
+print("\nAnálise completa! Lembre-se:")
 print("   • 'a' define a REATIVIDADE emocional")
 print("   • 'b' representa os GESTOS CONSTANTES de afeto")
 print("   • O equilíbrio vem do ajuste cuidadoso de ambos!")
