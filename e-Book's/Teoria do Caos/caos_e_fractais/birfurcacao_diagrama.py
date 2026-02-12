@@ -13,9 +13,9 @@ def diagrama_bifurcacao(r_min=2.5, r_max=4.0, passos=10000, n_iter=1000, n_exibi
 
     for r in r_vals:
         x = x0
-        for _ in range(n_iter - n_exibir):
+        for i in range(n_iter - n_exibir):
             x = logistica(x, r)
-        for _ in range(n_exibir):
+        for i in range(n_exibir):
             x = logistica(x, r)
             xs.append((r, x))
 
