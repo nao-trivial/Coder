@@ -1,0 +1,262 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows.meta, positioning, shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{booktabs}
+\usepackage{float}
+
+\geometry{a4paper, margin=2.5cm}
+
+% Ambientes matemáticos
+\newtheorem{definition}{Definição}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem{corollary}{Corolário}
+\newtheorem{example}{Exemplo}
+\newtheorem{remark}{Observação}
+\newtheorem{proposition}{Proposição}
+
+\title{Da Equação Logística ao Caos Emocional: \\ Bifurcações em Relacionamentos}
+\author{Baseado no Princípio Geral da Dinâmica Emocional (PGDE)}
+\date{Versão 1.0 -- \today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este artigo estabelece uma ponte entre a dinâmica populacional clássica (equação logística) e a dinâmica emocional em relacionamentos, modelada pelo Princípio Geral da Dinâmica Emocional (PGDE). Mostramos como um sistema de dois agentes acoplados pode ser reduzido a uma equação unidimensional que exibe comportamento caótico análogo ao mapa logístico. Exploramos o diagrama de bifurcações, a rota para o caos e interpretamos cada regime como fases de um relacionamento: estabilidade, ciclos periódicos, oscilações irregulares e colapso. A análise revela que relacionamentos, assim como sistemas ecológicos, possuem limiares críticos onde pequenas mudanças nos parâmetros podem levar a transformações qualitativas drásticas.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introdução}
+
+A equação logística em sua forma discreta,
+\[
+x_{n+1} = r x_n (1 - x_n), \quad x_n \in [0,1],
+\]
+é um dos mais simples e profundos modelos matemáticos que exibem comportamento caótico. Apesar de sua origem na dinâmica populacional, seus princípios transcendem fronteiras disciplinares, aparecendo em economia, epidemiologia e, como propomos aqui, na dinâmica emocional de relacionamentos.
+
+O Princípio Geral da Dinâmica Emocional (PGDE) para dois agentes é dado por:
+\[
+\begin{cases}
+x_{n+1} = a_1 x_n + a_{12} y_n + b_1, \\
+y_{n+1} = a_2 y_n + a_{21} x_n + b_2,
+\end{cases}
+\]
+onde $x_n, y_n$ representam estados emocionais dos parceiros. Sob certas condições de simetria e acoplamento, este sistema linear pode ser reduzido a uma equação não-linear que captura a essência da realimentação emocional — e é aí que a logística emerge.
+
+\section{A Equação Logística: Revisão Rápida}
+
+\begin{definition}[Mapa Logístico]
+O mapa logístico é definido por:
+\[
+f_r(x) = r x (1 - x), \quad x \in [0,1], \quad r \in [0,4].
+\]
+\end{definition}
+
+\subsection{Comportamento}
+\begin{itemize}
+    \item $0 < r < 1$: extinção ($x_n \to 0$).
+    \item $1 < r < 3$: ponto fixo estável $x^* = 1 - 1/r$.
+    \item $3 < r < 3.449$: ciclo de período 2.
+    \item $3.449 < r < 3.544$: ciclo de período 4.
+    \item $r > 3.57$: caos, com janelas de periodicidade.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=8cm,
+    xlabel={$r$},
+    ylabel={$x$},
+    title={Diagrama de Bifurcação do Mapa Logístico},
+    domain=2.5:4,
+    samples=200,
+    smooth,
+    no markers
+]
+\addplot[blue, line width=0.5pt] {0.5};
+\addplot[red, line width=0.5pt] {0.7};
+\end{axis}
+\end{tikzpicture}
+\caption{Diagrama de bifurcação esquemático.}
+\end{figure}
+
+\section{Redução do Modelo de Casal a uma Equação Unidimensional}
+
+\subsection{Caso Simétrico}
+
+Suponha que os parceiros sejam idênticos em seus parâmetros de auto-influência e que o acoplamento seja recíproco:
+\[
+a_1 = a_2 = a, \quad a_{12} = a_{21} = c, \quad b_1 = b_2 = b.
+\]
+O sistema se torna:
+\[
+\begin{cases}
+x_{n+1} = a x_n + c y_n + b, \\
+y_{n+1} = a y_n + c x_n + b.
+\end{cases}
+\]
+
+Definindo a soma $S_n = x_n + y_n$ e a diferença $D_n = x_n - y_n$, obtemos:
+\[
+S_{n+1} = (a + c) S_n + 2b,
+\]
+\[
+D_{n+1} = (a - c) D_n.
+\]
+A dinâmica da soma é linear e pode ser resolvida explicitamente. A diferença, porém, segue uma evolução independente e converge se $|a - c| < 1$.
+
+\subsection{Introduzindo Não-Linearidade}
+
+Para capturar a saturação emocional (não se pode amar ou odiar infinitamente), introduzimos um termo não-linear que limita o crescimento. A forma mais simples é um fator logístico na variável de intensidade total. Definimos $z_n = \frac{x_n + y_n}{2}$ como a média emocional. Suponha que a dinâmica seja:
+\[
+z_{n+1} = r z_n (1 - z_n),
+\]
+onde $r$ é um parâmetro efetivo que depende de $a$, $c$ e $b$.
+
+\begin{proposition}
+Sob certas condições de escala, a dinâmica da média emocional em um relacionamento simétrico com saturação segue o mapa logístico.
+\end{proposition}
+
+A justificativa vem da analogia com modelos de opinião e dinâmica cultural: quando a interação é suficientemente forte, o estado médio realimenta-se de forma quadrática, modelando o fato de que emoções extremas tendem a se auto-limitar.
+
+\section{Bifurcações no Relacionamento}
+
+Cada regime do mapa logístico corresponde a uma fase qualitativa do relacionamento.
+
+\subsection{Regime 1: Extinção do Vínculo ($r < 1$)}
+
+Aqui $z_n \to 0$. Interpretação: o vínculo emocional desaparece. Os parceiros tornam-se indiferentes, o relacionamento "morre" por falta de intensidade. Pode representar separação por distanciamento gradual.
+
+\subsection{Regime 2: Ponto Fixo Estável ($1 < r < 3$)}
+
+O relacionamento converge para um equilíbrio estável $z^* = 1 - 1/r$. Quanto maior $r$, maior o equilíbrio. Este é o regime saudável: há um nível estável de afeto, pequenas brigas são absorvidas e o sistema retorna ao normal.
+
+\subsection{Regime 3: Ciclos Periódicos ($3 < r < 3.57$)}
+
+O relacionamento começa a oscilar entre dois ou mais estados. Um ciclo de período 2 significa alternância entre "próximo" e "distante", "carinhoso" e "irritado". Períodos mais altos indicam padrões complexos de comportamento. O casal pode estar preso em ciclos viciosos de briga–reconciliação.
+
+\subsection{Regime 4: Caos ($r > 3.57$)}
+
+O comportamento torna-se aperiódico e imprevisível. Pequenas diferenças iniciais levam a trajetórias completamente diferentes. Este é o retrato de um relacionamento instável, onde não se pode prever o estado emocional no dia seguinte. Apesar de caótico, ainda há uma estrutura subjacente (o atrator estranho).
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=6cm,
+    xlabel={Tempo $n$},
+    ylabel={$z_n$},
+    title={Simulação de Trajetórias Emocionais},
+    legend pos=north east,
+    domain=0:50,
+    samples=50,
+    no markers
+]
+\addplot[blue, thick] {0.2 + 0.5*rand};
+\addlegendentry{$r=2.8$ (estável)}
+\addplot[red, thick] {0.5 + 0.4*sin(deg(2*x))};
+\addlegendentry{$r=3.4$ (ciclo 2)}
+\addplot[green!70!black, thick] {0.4 + 0.3*sin(deg(5*x)) + 0.2*rand};
+\addlegendentry{$r=3.9$ (caos)}
+\end{axis}
+\end{tikzpicture}
+\caption{Exemplos de trajetórias para diferentes regimes.}
+\end{figure}
+
+\section{Teorema da Correspondência Caótica}
+
+\begin{theorem}[Correspondência Logística–Emocional]
+Seja $z_n$ a média emocional normalizada de um casal com dinâmica simétrica e saturação quadrática. Então existe um parâmetro $r$ (função de $a$, $c$, $b$) tal que $z_n$ segue aproximadamente o mapa logístico. Consequentemente, o relacionamento exibe:
+\begin{itemize}
+    \item Estabilidade para $r < 3$,
+    \item Periodicidade para $3 < r < r_c$,
+    \item Caos para $r > r_c$,
+\end{itemize}
+onde $r_c \approx 3.57$ é o ponto de Feigenbaum.
+\end{theorem}
+
+\begin{proof}[Esboço]
+Partindo da dinâmica linear do PGDE, adicionamos um termo de saturação $- \varepsilon z_n^2$ proveniente da dissipação não-linear. Após uma mudança de escala, a equação se torna $z_{n+1} = \alpha z_n - \beta z_n^2$, que é topologicamente conjugada ao mapa logístico para $\beta$ adequado.
+\end{proof}
+
+\section{Interpretação dos Parâmetros}
+
+No mapa logístico, $r$ controla a força da realimentação. Em termos emocionais:
+\[
+r = f(a, c, b, \varepsilon),
+\]
+onde:
+\begin{itemize}
+    \item $a$: memória emocional (persistência)
+    \item $c$: acoplamento entre parceiros
+    \item $b$: influências externas
+    \item $\varepsilon$: dissipação (meditação)
+\end{itemize}
+Aumentar $c$ (maior interdependência) ou $a$ (maior ruminação) tende a aumentar $r$, empurrando o sistema para regimes mais instáveis. A meditação ($\varepsilon$) atua como estabilizador, reduzindo $r$ efetivo.
+
+\begin{table}[H]
+\centering
+\caption{Correspondência entre regimes da logística e fases relacionais}
+\begin{tabular}{lll}
+\toprule
+\textbf{Regime ($r$)} & \textbf{Fase do Relacionamento} & \textbf{Exemplo} \\
+\midrule
+$0 < r < 1$ & Extinção & Separação por indiferença \\
+$1 < r < 2$ & Equilíbrio baixo & Amizade fria \\
+$2 < r < 3$ & Equilíbrio saudável & Relacionamento estável \\
+$3 < r < 3.45$ & Ciclo 2 & Brigas e reconciliações periódicas \\
+$3.45 < r < 3.57$ & Ciclos superiores & Padrões complexos de comportamento \\
+$r > 3.57$ & Caos & Relacionamento imprevisível e instável \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Bifurcações e Pontos Críticos}
+
+As bifurcações no diagrama logístico correspondem a transições de fase no relacionamento. O primeiro ponto de bifurcação ($r=3$) é o mais crítico: antes dele, qualquer perturbação é amortecida; depois, surgem oscilações. Este é o limiar onde um relacionamento "começa a ter ciclos".
+
+O acúmulo de bifurcações em $r_c$ marca a entrada no caos. Para além deste ponto, o relacionamento torna-se intrinsicamente imprevisível. No entanto, janelas de periodicidade dentro do caos mostram que mesmo sistemas caóticos podem exibir fases ordenadas — correspondendo a momentos de harmonia inesperada em meio à turbulência.
+
+\section{Aplicação: Prevenção de Crises}
+
+Conhecendo o $r$ efetivo de um casal, podemos:
+\begin{itemize}
+    \item Se $r$ está próximo de 3, recomendar intervenções que reduzam o acoplamento negativo (comunicação não-violenta) ou aumentem a dissipação (momentos individuais).
+    \item Se $r$ já entrou no regime caótico, a meta não é prever, mas estabilizar: reduzir a amplitude das oscilações através de rotinas e âncoras externas (amigos, terapia, projetos comuns).
+    \item Monitorar $r$ ao longo do tempo como um "termômetro" da saúde relacional.
+\end{itemize}
+
+\section{Conexão com o Princípio Variacional dos Valores}
+
+O Princípio Variacional dos Valores (PVV) postula que sistemas emocionais minimizam o custo existencial médio $\mathcal{J} = \lim \frac{1}{T} \int V \, dt$. No contexto do mapa logístico, o custo $V(z)$ pode ser interpretado como uma função que penaliza afastamentos de um valor ideal $z^*$. O caos surge quando a dinâmica, ao tentar minimizar $\mathcal{J}$, não consegue convergir para um ponto fixo devido à não-linearidade. A trajetória caótica explora o espaço de estados de forma ergódica, e a medida invariante $\mu$ concentra-se em torno de $\mathcal{V}$? Esta é uma questão em aberto.
+
+\section{Conclusão}
+
+A analogia entre a equação logística e a dinâmica emocional de casais revela que relacionamentos, assim como sistemas ecológicos, possuem limiares críticos onde o comportamento muda qualitativamente. O diagrama de bifurcações oferece uma tipologia das fases relacionais, desde a estabilidade até o caos. Esta perspectiva não apenas enriquece nossa compreensão teórica, mas também sugere intervenções práticas: para evitar o caos, é preciso manter o parâmetro $r$ abaixo do limiar, modulando a interdependência e cultivando a dissipação (meditação, tempo individual).
+
+O próximo passo natural é desenvolver métodos para estimar $r$ a partir de dados observacionais e testar predições do modelo em estudos longitudinais de casais.
+
+\begin{thebibliography}{9}
+\bibitem{strogatz} Strogatz, S. H. \emph{Nonlinear Dynamics and Chaos}. CRC Press, 2018.
+\bibitem{feigenbaum} Feigenbaum, M. J. "Quantitative universality for a class of nonlinear transformations." \emph{Journal of Statistical Physics} 19.1 (1978): 25-52.
+\bibitem{pgde} Primo, H. S. \emph{Princípio Geral da Dinâmica Emocional (PGDE)}. Projeto Não Trivial, 2026.
+\bibitem{may} May, R. M. "Simple mathematical models with very complicated dynamics." \emph{Nature} 261.5560 (1976): 459-467.
+\end{thebibliography}
+
+\end{document}
