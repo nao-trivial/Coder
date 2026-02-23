@@ -1,8 +1,8 @@
 def ovos_avaliados(ovos_totais, ovos_seus, ovos_de_amigos):
     if ovos_seus + ovos_de_amigos < total_eggs:
-        return 'Keep Hunting'
+        return 'Caça aos ovos!!!'
     else:
-        return 'Candy Time'
+        return 'HORA DE COMER!'
 
 # Sample Input
 ovos_totais = int(input())
