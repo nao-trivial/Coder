@@ -12,10 +12,10 @@ for A0 in atrasos_iniciais:
     plt.plot(fatores_congestionamento, atrasos_finais, label=f'A₀ = {A0} min')
 
 # Personalização
-plt.title("🦋 Amplificação do Atraso Inicial pelo Fator de Congestionamento", fontsize=14)
+plt.title("Amplificação do Atraso Inicial pelo Fator de Congestionamento", fontsize=14)
 plt.xlabel("Fator de Congestionamento (k)", fontsize=12)
 plt.ylabel("Atraso Estimado Final (min)", fontsize=12)
-plt.axhline(30, color='red', linestyle='--', label='⚠️ Limite crítico: 30 min')
+plt.axhline(30, color='red', linestyle='--', label='Limite crítico: 30 min')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
