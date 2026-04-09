@@ -1,12 +1,12 @@
 # Parâmetros do modelo
-saldo_inicial = 1000  # Valor inicial em reais
-meses = 20            # Número de meses para simular
+saldo_inicial = 0  # Valor inicial em reais
+meses = 60            # Número de meses para simular
 historico = [saldo_inicial]  # Lista para guardar o histórico
 
 # Simulação do investimento
 saldo = saldo_inicial
 for mes in range(meses):
-    saldo = 0.7 * saldo + 50  # Perde 30% e recebe R$ 50 de aporte
+    saldo = 1.005 * saldo + 800  # Lucro 0,5% e recebe R$ 800 de aporte
     historico.append(saldo)
 
 # Resultado final
