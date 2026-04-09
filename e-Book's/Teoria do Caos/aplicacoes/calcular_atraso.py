@@ -1,7 +1,7 @@
 import math
 
 def exibir_tabela_congestionamento():
-    print("\n📈 TABELA DE REFERÊNCIA – Fator de Congestionamento")
+    print("\n TABELA DE REFERÊNCIA – Fator de Congestionamento")
     print("---------------------------------------------")
     print("|  Fator  | Situação típica                  |")
     print("|---------|----------------------------------|")
@@ -12,21 +12,21 @@ def exibir_tabela_congestionamento():
     print("|   2.2   | Altamente congestionado          |")
     print("|   2.8+  | Engarrafamento severo            |")
     print("---------------------------------------------")
-    print("🔎 Dica: Use um valor coerente com a sua experiência diária.\n")
+    print("Dica: Use um valor coerente com a sua experiência diária.\n")
 
 
 def calcular_risco_de_atraso():
-    print("📊 Calculadora de Risco de Atraso (Baseada na Teoria do Caos)")
+    print("Calculadora de Risco de Atraso (Baseada na Teoria do Caos)")
     exibir_tabela_congestionamento()
 
     # Entrada do usuário
     try:
-        n_paradas = int(input("🔢 Nº de pontos de parada: "))
-        tempo_por_parada = float(input("⏱ Tempo médio por parada (em segundos): "))
-        fator_congestionamento = float(input("🚧 Fator de congestionamento (ex: 1.8): "))
-        atraso_inicial = float(input("⏳ Atraso inicial (em minutos): "))
+        n_paradas = int(input("Nº de pontos de parada: "))
+        tempo_por_parada = float(input("Tempo médio por parada (em segundos): "))
+        fator_congestionamento = float(input("Fator de congestionamento (ex: 1.8): "))
+        atraso_inicial = float(input("Atraso inicial (em minutos): "))
     except ValueError:
-        print("⚠️ Entrada inválida! Tente novamente com números válidos.")
+        print("Entrada inválida! Tente novamente com números válidos.")
         return
 
     # Cálculos
@@ -36,19 +36,19 @@ def calcular_risco_de_atraso():
 
     # Classificação do risco
     if risco_total < 15:
-        nivel_risco = "✅ BAIXO"
+        nivel_risco = "BAIXO"
     elif risco_total < 30:
-        nivel_risco = "⚠️ MÉDIO"
+        nivel_risco = "MÉDIO"
     else:
-        nivel_risco = "❌ ALTO"
+        nivel_risco = "ALTO"
 
     # Resultados
     print("\n--- RESULTADOS ---")
-    print(f"🔧 Risco Base: {risco_base:.2f} min")
-    print(f"🦋 Efeito Borboleta: {efeito_borboleta:.2f} min")
-    print(f"📉 Risco Total Estimado: {risco_total:.2f} min")
-    print(f"📌 Nível de Risco: {nivel_risco}")
-    print(f"⏱ Tempo Estimado: {int(risco_total)} min")
+    print(f"Risco Base: {risco_base:.2f} min")
+    print(f"Efeito Borboleta: {efeito_borboleta:.2f} min")
+    print(f"Risco Total Estimado: {risco_total:.2f} min")
+    print(f"Nível de Risco: {nivel_risco}")
+    print(f"Tempo Estimado: {int(risco_total)} min")
 
 if __name__ == "__main__":
     calcular_risco_de_atraso()
