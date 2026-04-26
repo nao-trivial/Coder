@@ -21,7 +21,7 @@ def ponto_fixo(a, b):
 # Configuração dos parâmetros para diferentes cenários
 cenarios = [
     # a, b, x0, nome, cor
-    (1.1, 0.2, 5, "CRISE: a > 1 (explosivo)", "red"),
+    (1.1, 0.2, 5, "Ansiedade: a > 1 (explosivo)", "red"),
     (1.1, -0.5, 5, "a > 1 mas b negativo", "darkred"),
     (0.9, 0.1, 50, "AMORTECIMENTO a < 1", "blue"),
     (0.9, 2.0, 50, "a < 1 mas b positivo salva!", "green"),
