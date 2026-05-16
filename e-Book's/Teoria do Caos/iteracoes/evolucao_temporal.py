@@ -26,5 +26,5 @@ def plot_evolucao_simples(f, x0, n=10, titulo="Evolução Temporal"):
     return sequencia
 
 # Exemplo de uso:
-f = lambda x: x**2 - 2
-plot_evolucao_simples(f, 1.5, 8, "Exemplo: xₙ₊₁ = xₙ² - 2")
+f = lambda x: 0.85 * x + 3000
+plot_evolucao_simples(f, 0, 8, "Exemplo: xₙ₊₁ = 0,85.xₙ + 3000")
