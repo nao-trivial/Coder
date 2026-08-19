@@ -1,9 +1,7 @@
 import matplotlib.pyplot as plt
 
 def plot_evolucao_simples(f, x0, n=10, titulo="Evolução Temporal"):
-    """
-    Versão simplificada para análise básica
-    """
+    
     # Calcular sequência
     sequencia = [x0]
     for i in range(n):
